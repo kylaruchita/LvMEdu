@@ -125,6 +125,9 @@
   .steps li:last-child{ border-left-color:transparent; padding-bottom:0; }
   .steps li::before{ content:counter(step); position:absolute; left:-16px; top:-2px; width:30px; height:30px; border-radius:50%; background: var(--blue); color:#fff; font-weight:800; font-size:.85rem; display:flex; align-items:center; justify-content:center; }
   .steps strong{ color: var(--ink); }
+  .steps li ul{ list-style:disc; padding-left:1.2em; margin:.5em 0 0; }
+  .steps li li{ counter-increment:none; position:static; border-left:0; padding:0 0 .35em; margin:0; max-width:none; }
+  .steps li li::before{ content:none; }
 
   .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; margin-top:24px; }
   .feature{ background: var(--white); border:1px solid var(--line); border-radius:14px; padding:20px; border-top:3px solid var(--gold); box-shadow: 0 10px 24px -20px rgba(0,44,95,.3); }
@@ -221,6 +224,9 @@
   .contact .detail{ font-size:.78rem; color: var(--ink-soft); margin-top:3px; overflow-wrap:anywhere; word-break:break-word; hyphens:auto; max-width: 100%; line-height:1.45; }
 
   footer{ max-width:800px; margin:74px auto 0; padding:22px 24px 30px; border-top:1px solid var(--line); font-size:.8rem; color: var(--ink-soft); }
+  .footer-admin{ margin-top:14px; text-align:right; }
+  .footer-admin a{ color: var(--ink-soft); font-size:.75rem; text-decoration:none; opacity:.7; }
+  .footer-admin a:hover{ opacity:1; text-decoration:underline; }
 
   .aktivasi-photos{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px; margin-top:24px; }
   .aktivasi-photos figure{ margin:0; background: var(--white); border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow: 0 10px 24px -20px rgba(0,44,95,.3); position:relative; }
@@ -258,7 +264,6 @@
     <div class="cta-group">
       <a class="cta-pill" href="#aktivasi">Cara Daftar</a>
       <a class="cta-pill cta-blue" href="https://wa.link/p7b9yh" target="_blank" rel="noopener">Daftar Sekarang</a>
-      <a class="cta-pill cta-outline" href="login.html">Log In</a>
     </div>
   </div>
 </div>
@@ -421,6 +426,34 @@
         </table>
       </div>
       <p style="font-size:.82rem;">*MDR QRIS Berlaku dikenakan kepada Merchant yang belum menggunakan QRIS dari Livin' Merchant, sesuai ketentuan BI No 24/8/DpG-DKSP/Srt/B (23 Juni & 26 Desember 2022), No 25/316/DKSP/Srt/B (26 Juni 2023), dan Siaran Pers RDG Februari 2025.<br>**MDR QRIS Promo dikenakan kepada seluruh pengguna Livin' Merchant.</p>
+
+      <h3 style="margin-top:36px;">Proses Settlement</h3>
+      <ol class="steps">
+        <li><strong>Merchant menerima pembayaran</strong>
+          <ul>
+            <li>Customer membayar melalui QRIS atau metode pembayaran yang tersedia.</li>
+            <li>Transaksi tercatat di aplikasi Livin' Merchant.</li>
+          </ul>
+        </li>
+        <li><strong>Dana masuk ke proses settlement</strong>
+          <ul>
+            <li>Setelah transaksi berhasil, dana tidak selalu berarti langsung dapat digunakan sebagai saldo rekening.</li>
+            <li>Sistem akan melakukan proses settlement sesuai ketentuan dan jadwal settlement yang berlaku.</li>
+          </ul>
+        </li>
+        <li><strong>Dana masuk ke rekening merchant</strong>
+          <ul>
+            <li>Dana hasil transaksi akan disalurkan ke <strong>rekening settlement yang terdaftar</strong> pada Livin' Merchant.</li>
+            <li>Nominal yang diterima merchant merupakan nilai transaksi setelah memperhitungkan <strong>MDR (Merchant Discount Rate)</strong> apabila berlaku.</li>
+          </ul>
+        </li>
+        <li><strong>Merchant dapat mengecek riwayat transaksi</strong>
+          <ul>
+            <li>Merchant dapat melihat transaksi dan status/riwayat dana melalui aplikasi <strong>Livin' Merchant</strong>.</li>
+            <li>Untuk rekonsiliasi, merchant sebaiknya mencocokkan transaksi di aplikasi dengan dana yang masuk ke rekening.</li>
+          </ul>
+        </li>
+      </ol>
     </section>
 
     <hr class="rule">
@@ -776,6 +809,7 @@
 
     <footer>
       Materi disusun berdasarkan Materi Edukasi Livin' Merchant, Bank Indonesia, POJK No. 22 Tahun 2023, dan PBI No. 23/6/PBI/2021. Kalkulator MDR bersifat estimasi. Untuk info resmi, hubungi Mandiri Call 14000.
+      <div class="footer-admin"><a href="login.html">Admin</a></div>
     </footer>
 
   </div>
